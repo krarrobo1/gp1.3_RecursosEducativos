@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta lang="Es">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recursos Educativos Abiertos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div id="intro">
+            <h1>La ruta mas corta (Algoritmo de Dijkstra)</h1>
+            <h2>Recurso interactivo</h2>
+            <p>El algoritmo basicamente soluciona la problemática de encontrar el camino mas corto entre Vertices que a su vez
+                estan conectados por aristas a mas vertices, el objeto de esto es ver que el valor de las artistas sumadas
+                en una ruta sea el mas corto o menor posible. </p>
+        </div>
+        <div class="interface">
+            <h1>Interfaz</h1>
+            <div >
+                <button id='randomNodeButton' class="botones">Añadir nodo</button>
+                <button id='connectNodeButton' class="botones">Conectar nodos</button>
+                <button id='dijkstraButton' class="botones">Camino mas corto</button>
+                <!-- <button id='mstButton' class="botones">MST</button> -->
+                <!-- <button id='saveButton' class="botones">Guardar</button>
+                <button id='loadButton' class="botones">Cargar</button> -->
+                <button id='resetButton' class="botones">Limpiar</button>
+            </div>
+        </div>
+        <div class="simulation">
+            <h1>Simulacion</h1>
+            <canvas id='canvas' width='500' height='700'></canvas>
+            <script type="text/javascript" src="graph.js"></script>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
