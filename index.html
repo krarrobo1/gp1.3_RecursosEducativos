@@ -7,44 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Recursos Educativos Abiertos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
-    <script src="jquery-3.3.1.min.js"></script>
-    <script>
-
-
-    </script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
 </head>
 
 <body>
-    <div class="contenedor">
-        <div id="intro">
-            <h1>La ruta mas corta (Algoritmo de Dijkstra)</h1>
-            <h2>Recurso interactivo</h2>
-            <p>El algoritmo basicamente soluciona la problemática de encontrar el camino mas corto entre Vertices que a su vez
-                estan conectados por aristas a mas vertices, el objeto de esto es ver que el valor de las aristas sumadas
-                en una ruta sea el mas corto o menor posible. </p>
-        </div>
-        <div class="interface">
-            <h1>Interfaz</h1>
-            <div >
-                <button id='randomNodeButton' class="botones">Añadir nodo</button>
-                <button id='connectNodeButton' class="botones">Conectar nodos</button>
-                <button id='dijkstraButton' class="botones">Camino mas corto</button>
-                <!-- <button id='mstButton' class="botones">MST</button> -->
-                <!-- <button id='saveButton' class="botones">Guardar</button>
-                <button id='loadButton' class="botones">Cargar</button> -->
-                <button id='resetButton' class="botones">Limpiar</button>
+
+    <div class="container-fluid">
+            <div class="col-12 borde">
+                <h1>La ruta más corta (Algoritmo de Dijkstra)</h1>
+                <div class="row">
+                    <h2>Recurso interactivo</h2>
+                    <p>El algoritmo básicamente soluciona la problemática de encontrar el camino mas corto entre Vértices que
+                        a su vez estan conectados por aristas a uno o varios vertices, el objeto de esto es ver que el valor
+                        de las aristas sumadas en una ruta sea el mas corto o menor posible. </p>
+                </div>
             </div>
         </div>
-        <div class="simulation">
-            <h1>Simulacion</h1>
-            <canvas id='canvas' width='500' height='700'></canvas>
-            <script type="text/javascript" src="graph.js"></script>
+        <div class="row botones">
+            <div class="btn-group btn-sm">
+                <button id='randomNodeButton' class="btn btn-primary btn-block">Añadir nodo</button>
+                <button id='connectNodeButton' class="btn btn-primary">Conectar nodos</button>
+                <button id='dijkstraButton' class="btn btn-primary">Camino mas corto</button>
+                <button id='resetButton' class="btn btn-primary">Limpiar</button>
+            </div>
+        </div>
+        <div class="alert alert-info mensaje1">
+            <p>Presione <strong>Añadir nodo</strong> para comenzar...</p>
+        </div>
+        
+        
 
+
+        <div class="row">
+            <div class="col-6">
+                <canvas id='canvas' width="750px" height="600px"></canvas>
+                <script type="text/javascript" src="js/graph.js"></script>
+            </div>
+            <div class="col-6">
+                <h3>La ruta mas corta</h3>
+                <p>{a,b,c,d,e,f}</p>
+            </div>
         </div>
     </div>
+    <!-- Termina el contenido-->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
