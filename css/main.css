@@ -29,6 +29,7 @@
 }
 .info{
     padding: 1em;
+    text-align: justify;
 }
 body{
     background: #E9EAED;
