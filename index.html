@@ -1,63 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta lang="Es">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Recursos Educativos Abiertos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
+    <script src="js/all.js"></script>
+    <title>Recursos Educativos</title>
 </head>
 
 <body>
-
     <div class="container-fluid">
-            <div class="col-12 borde">
-                <h1>La ruta más corta (Algoritmo de Dijkstra)</h1>
-                <div class="row">
-                    <h2>Recurso interactivo</h2>
-                    <p>El algoritmo básicamente soluciona la problemática de encontrar el camino mas corto entre Vértices que
-                        a su vez estan conectados por aristas a uno o varios vertices, el objeto de esto es ver que el valor
-                        de las aristas sumadas en una ruta sea el mas corto o menor posible. </p>
-                </div>
-            </div>
-        </div>
-        <div class="row botones">
-            <div class="btn-group btn-sm">
-                <button id='randomNodeButton' class="btn btn-primary btn-block">Añadir nodo</button>
-                <button id='connectNodeButton' class="btn btn-primary">Conectar nodos</button>
-                <button id='dijkstraButton' class="btn btn-primary">Camino mas corto</button>
-                <button id='resetButton' class="btn btn-primary">Limpiar</button>
-            </div>
-        </div>
-        <div class="alert alert-info mensaje1">
-            <p>Presione <strong>Añadir nodo</strong> para comenzar...</p>
-        </div>
-        
-        
-
-
         <div class="row">
-            <div class="col-6">
-                <canvas id='canvas' width="750px" height="600px"></canvas>
-                <script type="text/javascript" src="js/graph.js"></script>
+            <header class="col-12 encabezado">
+                <img class="float-left" src="logo.png" alt="utpl_logo" id="logo">
+                <h6 class="float-right" id="tituloe">Recursos Interactivos
+                        <i class="fas fa-pencil-alt"></i>
+                </h6>
+
+            </header>
+
+            <div class="col-12 col-md-6 info">
+                <h4>Algoritmo de Dijkstra</h4>
+                <p>También llamado algoritmo de caminos mínimos, es un algoritmo para la determinación del camino más corto
+                    dado un vértice origen al resto de vértices en un grafo con pesos en cada arista. Su nombre se refiere
+                    a Edsger Dijkstra, quien lo describió por primera vez en 1959.</p>
             </div>
-            <div class="col-6">
-                <h3>La ruta mas corta</h3>
-                <p>{a,b,c,d,e,f}</p>
+
+            <div class="col-12 col-md-6 info">
+                <h4>Aplicaciones</h4>
+                <p>En múltiples aplicaciones donde se aplican los grafos, es necesario conocer el camino de menor costo entre
+                    dos vértices dados: </p>
+                <ul>
+                    <li>Distribución de productos a una red de establecimientos comerciales. </li>
+                    <li>Distribución de correos postales. </li>
+                    <li>Sea G = (V, A) un grafo dirigido ponderado. </li>
+                </ul>
+
             </div>
+
+            <div class="col-12 btn-group btn-justified contenedorbtn">
+
+
+                <button id='randomNodeButton' class="btn btn-primary botones">Añadir nodo</button>
+                <button id='connectNodeButton' class="btn btn-primary botones">Conectar nodos</button>
+                <button id='dijkstraButton' class="btn btn-primary botones">Camino mas corto</button>
+                <button id='resetButton' class="btn btn-primary botones">Limpiar</button>
+
+
+            </div>
+            <div class=" col-7 alert alert-info instrucciones">
+
+                <div class="mensaje1">
+                    <i class="fas fa-info-circle"></i> Presiona
+                    <strong>'Añadir nodo'</strong> para comenzar...
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+                    <canvas id='canvas' width="720px" height="420px" ></canvas>
+                    <script type="text/javascript" src="js/graph.js"></script>
+            </div>
+            <div>
+                
+            </div>
+
+
+
+            <footer class="col-12">
+                <p><i class="far fa-envelope float-center"></i> krarrobo1@utpl.edu.ec</p>
+            </footer>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-    <!-- Termina el contenido-->
+
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

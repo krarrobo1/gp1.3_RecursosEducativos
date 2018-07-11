@@ -1,15 +1,57 @@
-
-#intro{
-    background-color: #0ed6bd;
+*{
+    padding: 0;
+    margin: 0;
 }
-
-
 .botones{
-    background-color: rgb(3, 55, 167);
-    padding: 20px;
+    background-color: #003f72;
     
 }
 .borde{
-    background-color: beige;
+    background-color: #ffffff;
+    padding: 0.5em;
+
+}
+.encabezado{
+    background: #003f72;
+	padding: 0.5em 0;
+	border: 1px solid #eaab00;
+	border-width: 0 0 3px 0;
+}
+#logo{
+    width: 100%;
+    max-width: 200px;
+}
+#tituloe{
+    font-size: 20px;
+    font-family: fantasy;
+    color: #ffffff;
+    
+}
+.info{
     padding: 1em;
+}
+body{
+    background: #E9EAED;
+    clear: both;
+    width: 100%;
+}
+footer{
+    background: #003f72;
+    color: #ffffff;
+    border: 2px solid #eaab00;
+    border-width: 0 3px 0 3px;
+    
+    
+}
+#canvas{
+    background-color: #ffffff;
+    margin-left: 0.5%;
+    width: 100%;
+
+}
+.instrucciones{
+    margin-left: 17px;
+}
+.contenedorbtn{
+    width: 100%;
 }
