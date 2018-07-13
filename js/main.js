@@ -1,19 +1,19 @@
 
 
 
-$("#randomNodeButton").click(function () {
+$(".randomNodeButton").click(function () {
     $(".mensaje1").html(" <i class='fas fa-info-circle'></i> Selecciona los nodos que desee unir, luego presione <strong>'Conectar nodos' </strong> para unir los nodos seleccionados");
 });
 
-$("#connectNodeButton").click(function(){
+$(".connectNodeButton").click(function(){
     $(".mensaje1").html("<i class='fas fa-info-circle'></i> Presione <strong>'Camino mas corto' </strong> para encontrar el camino mas corto mediante Dijkstra...");
 });
 
-$("#dijkstraButton").click(function(){
+$(".dijkstraButton").click(function(){
     $(".mensaje1").html("<i class='fas fa-info-circle'></i> Presione <strong>'Limpiar'</strong> para empezar denuevo...");
 });
 
-$("#resetButton").click(function(){
+$(".resetButton").click(function(){
     $(".mensaje1").html("<i class='fas fa-info-circle'></i> Presione <strong>Añadir nodo</strong> para comenzar...")
 });
 
