@@ -82,10 +82,29 @@ Graph = function() {
 
         canvas.onmousedown = self.onmousedown;
 
-        var randomNodeButton = document.getElementById('randomNodeButton');
-        var connectNodeButton = document.getElementById('connectNodeButton');
-        var shortestPathButton = document.getElementById('dijkstraButton');
-        var resetButton = document.getElementById('resetButton');
+        //var randomNodeButton = document.getElementById('randomNodeButton');
+        //var connectNodeButton = document.getElementById('connectNodeButton');
+        //var shortestPathButton = document.getElementById('dijkstraButton');
+        //var resetButton = document.getElementById('resetButton');
+
+        var randomNodeButton = document.getElementsByClassName("randomNodeButton");
+        randomNodeButton[0].onclick = this.addRandomNode;
+        randomNodeButton[1].onclick = this.addRandomNode;
+
+        var connectNodeButton = document.getElementsByClassName("connectNodeButton");
+        connectNodeButton[0].onclick = this.connectNodes;
+        connectNodeButton[1].onclick = this.connectNodes;
+
+        var shortestPathButton = document.getElementsByClassName("dijkstraButton");
+        shortestPathButton[0].onclick = this.calculateShortestPath;
+        shortestPathButton[1].onclick = this.calculateShortestPath;
+
+        var resetButton = document.getElementsByClassName("resetButton");
+        resetButton[0].onclick = this.resetGraph;
+        resetButton[1].onclick = this.resetGraph;
+
+
+
         //var saveButton = document.getElementById('saveButton');
         //var loadButton = document.getElementById('loadButton');
 
@@ -93,10 +112,10 @@ Graph = function() {
 
         // this.toggleShortestPathButton();
         
-        randomNodeButton.onclick = this.addRandomNode;
-        connectNodeButton.onclick = this.connectNodes;
-        resetButton.onclick = this.resetGraph;
-        shortestPathButton.onclick = this.calculateShortestPath;
+        //randomNodeButton.onclick = this.addRandomNode;
+        //connectNodeButton.onclick = this.connectNodes;
+        //resetButton.onclick = this.resetGraph;
+        //shortestPathButton.onclick = this.calculateShortestPath;
        /* saveButton.onclick = this.saveGraph;
         loadButton.onclick = this.loadGraph;
 
