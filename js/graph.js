@@ -395,7 +395,11 @@ Graph = function() {
     this.addRandomNode = function() {
         var randomX = Math.floor(Math.random() * canvas.width);
         var randomY = Math.floor(Math.random() * canvas.height);
-        var newPoint = new Point(randomX,randomY);
+        var letras = [" A "," B "," C "," D "," E "," F "," G "," H "," I "," J "," K "," L "," N "," O "," P "," Q "," R ", " S "," T ", " U ", " V ", " W "," X "," Y "," Z "];
+        var letra = randomOneOf(letras);
+
+        var newPoint = new Point(randomX,randomY,letra);
+        
         newPoint.selected = true;
         points[points.length] = newPoint;
         selectedPoints[selectedPoints.length] = newPoint;
@@ -447,7 +451,7 @@ Edge = function(source,destination,cost) {
 }
 
 // Bit of a misnomer
-Point = function(x,y,radius) {
+Point = function(x,y,name,radius) {
     this.x = x;
     this.y = y;
     if (!radius) {
@@ -476,6 +480,8 @@ Point = function(x,y,radius) {
         ctx.arc(this.x,this.y,radius,0,2*Math.PI);
         ctx.fillStyle=color;
         ctx.fill();
+        
+        ctx.fillText(name, this.x-30, this.y+1);
         ctx.lineWidth = 2;
         ctx.strokeStyle=color;
         ctx.stroke();
@@ -514,6 +520,33 @@ Point = function(x,y,radius) {
     }
 }
 
+function randomNum(low, high) 
+// Given   : low <= high 
+// Returns : a random number in the range [low, high) 
+{ 
+    return Math.random()*(high-low) + low; 
+}  
+
+function randomInt(low, high) 
+// Given   : low <= high 
+// Returns : a random integer in the range [low, high] 
+{ 
+    return Math.floor(Math.random()*(high-low+1)) + low; 
+}  
+
+function randomChar(str) 
+// Given  : str is a nonempty string 
+// Returns: a random character from the string 
+{  
+    return str.charAt(randomInt(0, str.length-1)); 
+}  
+
+function randomOneOf(list) 
+// Given  : list is a nonempty list (array) 
+// Returns: a random item from the list 
+{    
+    return list[randomInt(0, list.length-1)]; 
+} 
 var graph = new Graph();
 
 graph.init();
